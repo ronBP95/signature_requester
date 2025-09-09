@@ -1,4 +1,5 @@
 import ParticleBackground from './particlebackground'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
           <li>Signature Requester</li>
         </ul>
         <ul>
-          <li className="z-1 max-sm:hidden inline-block rounded-4xl bg-black px-4 py-2 text-sm/6 font-semibold text-white hover:bg-gray-800 hover:cursor-pointer dark:bg-gray-700 dark:hover:bg-gray-600">Login</li>
+          <Link href="/login">
+            <li className="z-1 max-sm:hidden inline-block rounded-4xl bg-black px-4 py-2 text-sm/6 font-semibold text-white hover:bg-gray-800 hover:cursor-pointer dark:bg-gray-700 dark:hover:bg-gray-600">Login</li>
+          </Link>
         </ul>
       </div>
       <div className="p-30 items-center justify-center text-center">
@@ -18,7 +21,7 @@ export default function Home() {
         <h1 className="text-7xl">for your entire organization</h1>
         <p className="mt-5">Sign documents with ease and efficiency. Automate your entire signing workflow that integrates seamlessly with your existing tools.</p>
         <div className="flex items-center justify-center">
-          <button className="mt-5 w-48 bg-blue-500 hover:bg-sky-700 text-white py-2 px-4 rounded hover:cursor-pointer ">Try it now!</button>
+          <Link href="/login" className="mt-5 w-48 bg-blue-500 hover:bg-sky-700 text-white py-2 px-4 rounded hover:cursor-pointer ">Try it now!</Link>
         </div>
       </div>
     </div>
